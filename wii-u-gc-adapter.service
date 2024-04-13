@@ -1,0 +1,17 @@
+[Unit]
+Description=Wii U GameCube Adapter Service
+After=network.target
+Before=shutdown.target
+
+[Service]
+Type=simple
+User=root
+Group=root
+ExecStart="/usr/local/bin/wii-u-gc-adapter.d/start_gc_adapter.sh"
+RemainAfterExit=yes
+ExecStop=/bin/sh -c '/usr/local/bin/wii-u-gc-adapter.d/stop_gc_adapter.sh'
+TimeoutStartSec=10m
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
