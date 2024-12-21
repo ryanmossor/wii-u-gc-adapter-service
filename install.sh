@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Installer by: VGFreak95
 
 # NEEDS SUDO PERMISSIONS TO EXECUTE
